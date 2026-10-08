@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Neha 🤍</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Quicksand:wght@400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,body{
+    width:100%;
+    min-height:100%;
+}
+
+body{
+    background:#030305;
+    color:white;
+    font-family:"Quicksand",sans-serif;
+    overflow:hidden;
+}
+
+h1,h2,.final-title,.neha{
+    font-family:"DM Serif Display",serif;
+}
+
+.screen{
+    min-height:100vh;
+    width:100%;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:25px;
+    position:relative;
+    overflow:hidden;
+}
+
+.screen.active{
+    display:flex;
+}
+
+.content{
+    width:100%;
+    max-width:650px;
+    position:relative;
+    z-index:5;
+}
+
+.eyebrow{
+    font-size:11px;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    color:#d9a3c7;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(55px,17vw,110px);
+    line-height:.95;
+    background:linear-gradient(120deg,#fff,#e7a6cb,#fff);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.sub{
+    color:#aaa;
+    font-size:14px;
+    line-height:1.9;
+    margin:24px auto 32px;
+    max-width:480px;
+}
+
+.btn{
+    border:1px solid #c77da9;
+    background:rgba(255,255,255,.04);
+    color:white;
+    padding:14px 28px;
+    border-radius:50px;
+    font-family:"Quicksand",sans-serif;
+    font-size:12px;
+    letter-spacing:2px;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.btn:hover{
+    background:#c77da9;
+    box-shadow:0 0 35px #c77da955;
+    transform:translateY(-3px);
+}
+
+/* GLOW */
+
+.glow{
+    position:absolute;
+    width:350px;
+    height:350px;
+    border-radius:50%;
+    background:#9b3f78;
+    filter:blur(150px);
+    opacity:.18;
+    animation:glow 5s infinite alternate;
+}
+
+.g1{
+    top:-100px;
+    left:-100px;
+}
+
+.g2{
+    bottom:-120px;
+    right:-100px;
+}
+
+@keyframes glow{
+    from{transform:scale(1);}
+    to{transform:scale(1.3);}
+}
+
+/* STARS */
+
+.star{
+    position:absolute;
+    width:2px;
+    height:2px;
+    background:white;
+    border-radius:50%;
+    opacity:.5;
+    animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+    from{opacity:.15;}
+    to{opacity:.9;}
+}
+
+/* TYPING */
+
+.typing{
+    min-height:28px;
+    color:#aaa;
+    font-size:14px;
+    letter-spacing:1px;
+}
+
+/* BIRTHDAY */
+
+.birthday-title{
+    font-size:clamp(45px,12vw,85px);
+    line-height:1;
+}
+
+.pink{
+    color:#e69bc8;
+}
+
+.neha{
+    font-size:clamp(35px,10vw,65px);
+    margin-top:12px;
+}
+
+/* FIRST CARTOON */
+
+.cartoon{
+    position:relative;
+    width:150px;
+    height:180px;
+    margin:20px auto 5px;
+    animation:cartoonFloat 2.5s ease-in-out infinite;
+}
+
+.ear{
+    position:absolute;
+    width:45px;
+    height:55px;
+    background:#ffd6df;
+    border-radius:50%;
+    top:8px;
+}
+
+.left-ear{
+    left:4px;
+    transform:rotate(-25deg);
+}
+
+.right-ear{
+    right:4px;
+    transform:rotate(25deg);
+}
+
+.face{
+    position:absolute;
+    width:120px;
+    height:105px;
+    background:linear-gradient(145deg,#ffe5eb,#ffc8d5);
+    border-radius:50%;
+    left:15px;
+    top:18px;
+    z-index:2;
+    box-shadow:0 10px 35px rgba(255,105,150,.25);
+}
+
+.eye{
+    position:absolute;
+    width:12px;
+    height:18px;
+    background:#29202a;
+    border-radius:50%;
+    top:40px;
+}
+
+.left-eye{
+    left:32px;
+}
+
+.right-eye{
+    right:32px;
+}
+
+.eye::after{
+    content:"";
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    top:3px;
+    left:3px;
+}
+
+.blush{
+    position:absolute;
+    width:22px;
+    height:10px;
+    background:#ff9fb5;
+    border-radius:50%;
+    top:64px;
+    opacity:.8;
+}
+
+.left-blush{
+    left:10px;
+}
+
+.right-blush{
+    right:10px;
+}
+
+.mouth{
+    position:absolute;
+    width:25px;
+    height:13px;
+    border-bottom:3px solid #333;
+    border-radius:50%;
+    left:48px;
+    top:61px;
+}
+
+.body{
+    position:absolute;
+    width:86px;
+    height:72px;
+    background:linear-gradient(145deg,#b69aff,#7654c7);
+    border-radius:45px 45px 20px 20px;
+    left:32px;
+    top:108px;
+    z-index:1;
+}
+
+.cartoon-heart{
+    position:absolute;
+    color:#ff7fa8;
+    font-size:27px;
+    left:61px;
+    top:124px;
+    z-index:3;
+    animation:heartbeat 1s infinite;
+}
+
+@keyframes cartoonFloat{
+    0%,100%{
+        transform:translateY(0) rotate(-1deg);
+    }
+    50%{
+        transform:translateY(-12px) rotate(1deg);
+    }
+}
+
+@keyframes heartbeat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.3);}
+}
+
+/* GIFT */
+
+.gift{
+    width:120px;
+    height:100px;
+    margin:30px auto;
+    position:relative;
+    cursor:pointer;
+    animation:float 2.5s ease-in-out infinite;
+}
+
+.box{
+    position:absolute;
+    width:100%;
+    height:75px;
+    bottom:0;
+    background:linear-gradient(135deg,#b94c83,#69264d);
+    border-radius:5px;
+    box-shadow:0 15px 40px #000;
+}
+
+.lid{
+    position:absolute;
+    width:110%;
+    height:25px;
+    left:-5%;
+    top:5px;
+    background:#d477aa;
+    border-radius:5px;
+}
+
+.ribbon-v{
+    position:absolute;
+    width:18px;
+    height:100%;
+    background:#f4c2dc;
+    left:calc(50% - 9px);
+}
+
+.ribbon-h{
+    position:absolute;
+    width:100%;
+    height:18px;
+    background:#f4c2dc;
+    top:35px;
+}
+
+@keyframes float{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-12px);}
+}
+
+/* LETTER */
+
+.letter{
+    background:rgba(255,255,255,.035);
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:25px;
+    padding:32px 24px;
+    text-align:left;
+    backdrop-filter:blur(15px);
+    box-shadow:0 20px 80px #000;
+    max-height:70vh;
+    overflow:auto;
+}
+
+.letter h2{
+    text-align:center;
+    color:#e9a6cd;
+    font-size:30px;
+    margin-bottom:25px;
+}
+
+.letter p{
+    color:#ccc;
+    font-size:14px;
+    line-height:2;
+    margin-bottom:17px;
+}
+
+.letter .strong{
+    color:white;
+    font-weight:600;
+    text-align:center;
+    font-size:16px;
+}
+
+/* LAST SCREEN CARTOON */
+
+.last-cartoon{
+    position:relative;
+    width:170px;
+    height:190px;
+    margin:0 auto 20px;
+    animation:lastFloat 2.8s ease-in-out infinite;
+}
+
+.last-head{
+    position:absolute;
+    width:105px;
+    height:105px;
+    background:#ffe0e7;
+    border-radius:50%;
+    left:32px;
+    top:20px;
+    box-shadow:0 12px 35px rgba(255,150,190,.25);
+    z-index:3;
+}
+
+.last-hair{
+    position:absolute;
+    width:110px;
+    height:60px;
+    background:#3a2630;
+    border-radius:60px 60px 20px 20px;
+    left:29px;
+    top:10px;
+    z-index:4;
+}
+
+.last-eye{
+    position:absolute;
+    width:10px;
+    height:15px;
+    background:#30252a;
+    border-radius:50%;
+    top:55px;
+}
+
+.last-eye.left{
+    left:28px;
+}
+
+.last-eye.right{
+    right:28px;
+}
+
+.last-eye::after{
+    content:"";
+    position:absolute;
+    width:4px;
+    height:4px;
+    background:white;
+    border-radius:50%;
+    top:2px;
+    left:2px;
+}
+
+.last-smile{
+    position:absolute;
+    width:25px;
+    height:13px;
+    border-bottom:3px solid #39272d;
+    border-radius:50%;
+    left:40px;
+    top:72px;
+}
+
+.last-body{
+    position:absolute;
+    width:90px;
+    height:70px;
+    background:linear-gradient(135deg,#f08ab7,#9b5bc7);
+    border-radius:45px 45px 18px 18px;
+    left:40px;
+    top:112px;
+    z-index:2;
+}
+
+.last-hand{
+    position:absolute;
+    width:30px;
+    height:13px;
+    background:#ffe0e7;
+    border-radius:50%;
+    right:5px;
+    top:105px;
+    transform:rotate(-45deg);
+    z-index:5;
+    animation:wave 1s ease-in-out infinite;
+}
+
+@keyframes wave{
+    0%,100%{
+        transform:rotate(-45deg);
+    }
+    50%{
+        transform:rotate(-20deg);
+    }
+}
+
+.last-heart{
+    position:absolute;
+    color:#ff669d;
+    font-size:25px;
+    left:73px;
+    top:130px;
+    z-index:6;
+    animation:lastHeart 1.2s infinite;
+}
+
+@keyframes lastHeart{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.3);}
+}
+
+@keyframes lastFloat{
+    0%,100%{transform:translateY(0);}
+    50%{transform:translateY(-10px);}
+}
+
+
+/* =========================
+   CUTE PANDA
+========================= */
+
+.panda{
+    position:absolute;
+    width:90px;
+    height:105px;
+    right:-8px;
+    bottom:0;
+    z-index:10;
+    animation:pandaFloat 2.5s ease-in-out infinite;
+}
+
+.panda-ear{
+    position:absolute;
+    width:28px;
+    height:28px;
+    background:#17151a;
+    border-radius:50%;
+    top:5px;
+    z-index:1;
+}
+
+.panda-ear-left{
+    left:10px;
+}
+
+.panda-ear-right{
+    right:10px;
+}
+
+.panda-face{
+    position:absolute;
+    width:72px;
+    height:68px;
+    background:#fff;
+    border-radius:50%;
+    left:9px;
+    top:14px;
+    z-index:2;
+    box-shadow:0 8px 20px rgba(255,255,255,.12);
+}
+
+.panda-eye{
+    position:absolute;
+    width:18px;
+    height:25px;
+    background:#17151a;
+    border-radius:50%;
+    top:20px;
+}
+
+.panda-eye-left{
+    left:13px;
+    transform:rotate(25deg);
+}
+
+.panda-eye-right{
+    right:13px;
+    transform:rotate(-25deg);
+}
+
+.panda-eye::after{
+    content:"";
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:white;
+    border-radius:50%;
+    top:5px;
+    left:5px;
+}
+
+.panda-nose{
+    position:absolute;
+    width:9px;
+    height:7px;
+    background:#17151a;
+    border-radius:50%;
+    left:31px;
+    top:43px;
+}
+
+.panda-mouth{
+    position:absolute;
+    width:14px;
+    height:8px;
+    border-bottom:2px solid #17151a;
+    border-radius:50%;
+    left:29px;
+    top:47px;
+}
+
+.panda-cheek{
+    position:absolute;
+    width:12px;
+    height:6px;
+    background:#ffb6c9;
+    border-radius:50%;
+    top:44px;
+    opacity:.7;
+}
+
+.panda-cheek-left{
+    left:5px;
+}
+
+.panda-cheek-right{
+    right:5px;
+}
+
+.panda-body{
+    position:absolute;
+    width:58px;
+    height:48px;
+    background:#17151a;
+    border-radius:30px 30px 15px 15px;
+    left:16px;
+    top:65px;
+    z-index:1;
+}
+
+.panda-arm{
+    position:absolute;
+    width:22px;
+    height:11px;
+    background:#17151a;
+    border-radius:50%;
+    right:0;
+    top:68px;
+    transform:rotate(-35deg);
+}
+
+.panda-heart{
+    position:absolute;
+    color:#ff75a8;
+    font-size:18px;
+    left:36px;
+    top:76px;
+    z-index:4;
+    animation:pandaHeart 1.2s infinite;
+}
+
+@keyframes pandaFloat{
+    0%,100%{
+        transform:translateY(0) rotate(-2deg);
+    }
+    50%{
+        transform:translateY(-8px) rotate(2deg);
+    }
+}
+
+@keyframes pandaHeart{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.25);
+    }
+}
+
+
+/* FINAL */
+
+.final-title{
+    font-size:clamp(38px,10vw,68px);
+    line-height:1.25;
+}
+
+.final-title span{
+    color:#e89bc8;
+}
+
+.final-message{
+    font-family:"Quicksand",sans-serif;
+    font-size:15px;
+    line-height:2;
+    color:#e8e8e8;
+    max-width:560px;
+    margin:22px auto;
+}
+
+.final-message span{
+    display:block;
+    margin:8px 0;
+}
+
+.final-message .main{
+    color:#f1a7cb;
+    font-size:19px;
+    font-weight:600;
+}
+
+.final-message .last-line{
+    color:#fff;
+    font-weight:600;
+}
+
+.signature{
+    margin-top:25px;
+    color:#888;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* HEARTS */
+
+.heart{
+    position:fixed;
+    bottom:-30px;
+    z-index:20;
+    pointer-events:none;
+    animation:heartUp linear forwards;
+}
+
+@keyframes heartUp{
+    from{
+        transform:translateY(0) rotate(0);
+        opacity:0;
+    }
+    15%{opacity:1;}
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* CONFETTI */
+
+.confetti{
+    position:fixed;
+    top:-20px;
+    width:7px;
+    height:12px;
+    z-index:30;
+    animation:confettiFall 4s linear forwards;
+}
+
+@keyframes confettiFall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* FADE */
+
+.fade{
+    animation:fade .9s ease forwards;
+}
+
+@keyframes fade{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@media(max-width:400px){
+
+    .letter{
+        padding:25px 18px;
+    }
+
+    .letter p{
+        font-size:13px;
+    }
+
+    .last-cartoon{
+        transform:scale(.88);
+        margin-bottom:5px;
+    }
+
+    .final-message{
+        font-size:14px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- SCREEN 1 -->
+
+<section class="screen active" id="s1">
+
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+
+<div class="content fade">
+
+<div class="eyebrow">
+A little surprise for
+</div>
+
+<h1>
+Neha
+</h1>
+
+<div class="typing" id="typing"></div>
+
+<p class="sub">
+Some people deserve more than just a simple birthday wish...
+</p>
+
+<button class="btn" onclick="start()">
+BEGIN THE SURPRISE ✨
+</button>
+
+</div>
+</section>
+
+
+<!-- SCREEN 2 -->
+
+<section class="screen" id="s2">
+
+<div class="glow g1"></div>
+
+<div class="content fade">
+
+<div class="eyebrow">
+Today is your day
+</div>
+
+<div class="birthday-title">
+
+HAPPY<br>
+
+<span class="pink">
+BIRTHDAY
+</span>
+
+</div>
+
+<div class="neha">
+Neha 🎂
+</div>
+
+<div class="cartoon">
+
+<div class="ear left-ear"></div>
+<div class="ear right-ear"></div>
+
+<div class="face">
+
+<div class="eye left-eye"></div>
+<div class="eye right-eye"></div>
+
+<div class="blush left-blush"></div>
+<div class="blush right-blush"></div>
+
+<div class="mouth"></div>
+
+</div>
+
+<div class="body"></div>
+
+<div class="cartoon-heart">
+♥
+</div>
+
+</div>
+
+<p class="sub">
+The world became a little more beautiful
+on the day you were born. ❤️
+</p>
+
+<div class="gift" onclick="openGift()">
+
+<div class="lid"></div>
+<div class="box"></div>
+<div class="ribbon-v"></div>
+<div class="ribbon-h"></div>
+
+</div>
+
+<p class="eyebrow">
+Tap the gift 🎁
+</p>
+
+</div>
+</section>
+
+
+<!-- SCREEN 3 -->
+
+<section class="screen" id="s3">
+
+<div class="content fade">
+
+<div class="eyebrow">
+A message from the heart
+</div>
+
+<div class="letter">
+
+<h2>
+For You, Neha ❤️
+</h2>
+
+<p>
+Some people come into our lives unexpectedly,
+and somehow, they become one of the most important
+parts of it.
+</p>
+
+<p>
+You are one of those people.
+</p>
+
+<p>
+I may not always say it, but I truly appreciate
+every little thing about our friendship — the random
+conversations, the stupid jokes, the laughter,
+the arguments, the memories, and even the silent moments.
+</p>
+
+<p>
+You have been a beautiful part of my journey,
+and I honestly hope this friendship stays special
+for years to come.
+</p>
+
+<p class="strong">
+Never change the person you are.
+</p>
+
+<p>
+Keep smiling, keep dreaming, and keep being the
+amazing person you are.
+</p>
+
+<p>
+I hope life gives you all the happiness you deserve,
+all the success you dream of, and countless reasons
+to smile.
+</p>
+
+<p>
+No matter where life takes us, I will always be
+grateful that our paths crossed.
+</p>
+
+</div>
+
+<br>
+
+<button class="btn" onclick="finalScreen()">
+ONE LAST SURPRISE ❤️
+</button>
+
+</div>
+</section>
+
+
+<!-- FINAL SCREEN -->
+
+<section class="screen" id="s4">
+
+<div class="glow g1"></div>
+<div class="glow g2"></div>
+
+<div class="content fade">
+
+<div class="eyebrow">
+One last thing...
+</div>
+
+<!-- WAVING CARTOON + PANDA -->
+
+<div class="last-cartoon">
+
+<div class="last-hair"></div>
+
+<div class="last-head">
+
+<div class="last-eye left"></div>
+<div class="last-eye right"></div>
+
+<div class="last-smile"></div>
+
+</div>
+
+<div class="last-body"></div>
+
+<div class="last-hand"></div>
+
+<div class="last-heart">
+♥
+</div>
+
+
+<!-- CUTE PANDA -->
+
+<div class="panda">
+
+<div class="panda-ear panda-ear-left"></div>
+<div class="panda-ear panda-ear-right"></div>
+
+<div class="panda-face">
+
+<div class="panda-eye panda-eye-left"></div>
+<div class="panda-eye panda-eye-right"></div>
+
+<div class="panda-nose"></div>
+
+<div class="panda-mouth"></div>
+
+<div class="panda-cheek panda-cheek-left"></div>
+<div class="panda-cheek panda-cheek-right"></div>
+
+</div>
+
+<div class="panda-body"></div>
+
+<div class="panda-arm"></div>
+
+<div class="panda-heart">
+♥
+</div>
+
+</div>
+
+</div>
+
+
+<div class="final-title">
+
+Happy Birthday,<br>
+
+<span>
+Neha 🤍
+</span>
+
+</div>
+
+
+<div class="final-message">
+
+<span class="main">
+Happy birthday to my bestie! 🤍
+</span>
+
+<span>
+I can't imagine life without you. 🥺🤍
+</span>
+
+<span>
+I'm so grateful you came into my life
+when you did. 💯❤️
+</span>
+
+<span class="last-line">
+You understand me like nobody else. ☺️
+</span>
+
+</div>
+
+
+<div class="signature">
+MADE WITH ❤️ BY SHUBHAM
+</div>
+
+</div>
+</section>
+
+
+<script>
+
+/* TYPING */
+
+const text =
+"Today is not just another day... it's your special day. ❤️";
+
+let i=0;
+
+function typeText(){
+
+    if(i < text.length){
+
+        document.getElementById("typing").innerHTML +=
+        text.charAt(i);
+
+        i++;
+
+        setTimeout(typeText,45);
+    }
+}
+
+typeText();
+
+
+/* STARS */
+
+for(let i=0;i<70;i++){
+
+    let star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=
+    Math.random()*100+"vw";
+
+    star.style.top=
+    Math.random()*100+"vh";
+
+    star.style.animationDelay=
+    Math.random()*3+"s";
+
+    document.body.appendChild(star);
+}
+
+
+/* SCREEN CHANGE */
+
+function changeScreen(current,next){
+
+    document.getElementById(current)
+    .classList.remove("active");
+
+    setTimeout(()=>{
+
+        document.getElementById(next)
+        .classList.add("active");
+
+    },250);
+}
+
+
+/* START */
+
+function start(){
+
+    changeScreen("s1","s2");
+
+    setTimeout(createHearts,500);
+}
+
+
+/* GIFT */
+
+function openGift(){
+
+    createConfetti();
+
+    createHearts();
+
+    setTimeout(()=>{
+
+        changeScreen("s2","s3");
+
+    },700);
+}
+
+
+/* FINAL */
+
+function finalScreen(){
+
+    createConfetti();
+
+    createHearts();
+
+    changeScreen("s3","s4");
+}
+
+
+/* HEARTS */
+
+function createHearts(){
+
+    for(let i=0;i<25;i++){
+
+        let heart=document.createElement("div");
+
+        heart.className="heart";
+
+        const symbols=[
+            "❤️",
+            "💗",
+            "💕",
+            "✨",
+            "🤍"
+        ];
+
+        heart.innerHTML=
+        symbols[
+            Math.floor(
+                Math.random()*symbols.length
+            )
+        ];
+
+        heart.style.left=
+        Math.random()*100+"vw";
+
+        heart.style.fontSize=
+        (12+Math.random()*18)+"px";
+
+        heart.style.animationDuration=
+        (4+Math.random()*4)+"s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },8000);
+    }
+}
+
+
+/* CONFETTI */
+
+function createConfetti(){
+
+    const colors=[
+        "#e89bc8",
+        "#ffffff",
+        "#ffd166",
+        "#c77dff",
+        "#8ecae6"
+    ];
+
+    for(let i=0;i<100;i++){
+
+        let c=document.createElement("div");
+
+        c.className="confetti";
+
+        c.style.left=
+        Math.random()*100+"vw";
+
+        c.style.background=
+        colors[
+            Math.floor(
+                Math.random()*colors.length
+            )
+        ];
+
+        c.style.animationDelay=
+        Math.random()*1.5+"s";
+
+        document.body.appendChild(c);
+
+        setTimeout(()=>{
+
+            c.remove();
+
+        },6000);
+    }
+}
+
+</script>
+
+</body>
+</html>
